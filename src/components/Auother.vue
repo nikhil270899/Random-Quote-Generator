@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="child-class" v-if="!relatedQuotes">
+    <div class="child-class" v-if="!relatedQuotes && usedInAuthoer">
       <span class="mb-1">
         <b>{{ quoteDetails.quoteAuthor }} </b>
         <div>{{ quoteDetails.quoteGenre }}</div>
@@ -44,6 +44,10 @@ export default {
     quoteDetails: {
       type: [Array, Object],
       default: null,
+    },
+    usedInAuthoer: {
+      type: Boolean,
+      default: false,
     },
   },
 

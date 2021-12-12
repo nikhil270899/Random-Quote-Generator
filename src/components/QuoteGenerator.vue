@@ -4,7 +4,6 @@
       <b-card class="card-class">
         <b-card-text>
           <div>"{{ randomQuoteGenerated.quoteText }}"</div>
-          {{ randomQuoteGenerated.quoteAuthor }}
         </b-card-text>
       </b-card>
       <span class="random-parent">
@@ -18,6 +17,7 @@
         ><auother
           :quoteDetails="randomQuoteGenerated"
           @quotePresence="quotePresence"
+          :usedInAuthoer="true"
       /></b-card>
     </div>
   </div>
@@ -33,6 +33,7 @@ export default {
     return {
       randomQuoteGenerated: [],
       isQuotePresent: false,
+      usedInAuth: false,
     };
   },
   methods: {
