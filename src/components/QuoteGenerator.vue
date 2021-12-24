@@ -42,14 +42,12 @@ export default {
       window.location.reload();
     },
     quotePresence(quotePresent) {
-      console.log(quotePresent);
       this.isQuotePresent = quotePresent;
     },
   },
 
   async created() {
     let res = await this.randomQuotes();
-    console.log(res);
     let { data: quoteData } = res;
 
     let randomNumber = Math.floor(Math.random() * 10);
@@ -111,7 +109,6 @@ export default {
 }
 .random-parent {
   position: absolute;
-  right: 20rem;
   bottom: 9rem;
 }
 </style>
