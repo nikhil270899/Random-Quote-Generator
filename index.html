@@ -19,19 +19,20 @@
 
 <!-- Load Vue followed by BootstrapVue, and BootstrapVueIcons -->
 <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer. -->
-  <script>
-    (function () {
-      var s = document.createElement('script');
-      s.src = 'https://cdn-dev.securiti.xyz/consent/cookie-consent-sdk.js';
-      s.setAttribute('data-tenant-uuid', 'a8814902-7aec-4cf3-80c5-10e26c5fcc6b');
-      s.setAttribute('data-domain-uuid', 'bb2aa14e-c6c0-43d2-bced-f3da2f8ad7f4');
-      s.setAttribute('data-backend-url', 'https://dev.securiti.xyz');
-      s.defer = true;
-      var parent_node = document.head || document.body;
-      parent_node.appendChild(s);
-      s.addEventListener('load', function() { window.initCmp(); });
-    })()
-    </script>
+  <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer. -->
+<script>
+  (function () {
+    var s = document.createElement('script');
+    s.src = 'https://cdn-dev.securiti.xyz/consent/cookie-consent-sdk.js';
+    s.setAttribute('data-tenant-uuid', 'a8814902-7aec-4cf3-80c5-10e26c5fcc6b');
+    s.setAttribute('data-domain-uuid', 'bb2aa14e-c6c0-43d2-bced-f3da2f8ad7f4');
+    s.setAttribute('data-backend-url', 'https://dev.securiti.xyz');
+    s.defer = true;
+    var parent_node = document.head || document.body;
+    parent_node.appendChild(s);
+    s.addEventListener('load', function() { window.initCmp(); });
+  })()
+  </script>
 <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
 <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
